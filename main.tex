@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage{paper_style}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{indentfirst}
+\usepackage{lipsum}
+\usepackage{array}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{censor}
+\usepackage{tabularx}
+\usepackage[noabbrev,capitalize]{cleveref}
+\usepackage{amsmath}
+
+%% ===============================================
+%% Setting the line spacing (3 options: only pick one)
+% \doublespacing
+% \singlespacing
+\onehalfspacing
+%% ===============================================
+
+\setlength{\droptitle}{-5em} %% Don't touch
+
+\newcommand{\zerodisplayskips}{%
+  \setlength{\abovedisplayskip}{0pt}%
+  \setlength{\belowdisplayskip}{5pt}%
+  \setlength{\abovedisplayshortskip}{0pt}%
+  \setlength{\belowdisplayshortskip}{5pt}}
+\appto{\normalsize}{\zerodisplayskips}
+\appto{\small}{\zerodisplayskips}
+\appto{\footnotesize}{\zerodisplayskips}
+
+\renewcommand\tabularxcolumn[1]{m{#1}}
+\crefname{section}{Section}{Sections}
+\crefname{figure}{Figure}{Figures}
+\creflabelformat{equation}{#2\textup{#1}#3}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{Investigation of the Relationship between Temperature and Equilibrium Constant of a Thiocyanatoiron Complex Reaction}
+\author{\censor{Saptak Das}}
+\date{January 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\label{section:introduction}
+As someone who wants to major in Control Theory, the field of engineering that deals with the control of dynamic systems and processes, I have always been fascinated by industrial chemical processes like the Haber-Bosch Process and the Fischer-Tropsch Process. Specifically, I have always wondered how chemical engineers have optimized the efficiency and yield of these processes by selectively choosing the temperature and pressure conditions for the reaction.
+
+In my chemistry class, I learned about how Le Chatelier’s principle could be applied to shift the chemical equilibrium towards a desired product. However, I soon realized that knowing which product is thermodynamically favored is only one factor among many such as reaction rate and practical feasibility that chemical engineers must consider. Chemical engineers must realize the relationship between the temperature and equilibrium constant to find the precise temperature compromise to precisely optimize for all such factors \citep{libretextsHaberProcess}. Hence, I decided to explore how temperature affects the equilibrium constant for a thiocyanatoiron complex reaction for my Chemistry Internal Assessment.
+
+
+\subsection{Research Question}
+\noindent
+What is the relationship between the equilibrium constant and temperature of a thiocyanatoiron complex reaction?
+
+\input{background_research}
+
+\input{procedure}
+
+\input{data_collection}
+
+\input{analysis}
+
+\input{evaluation}
+
+\newpage
+\bibliography{ref}
+\bibliographystyle{apalike}
+
+\end{document}
